@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from applications.bitakora_website_app.views import homeView, redirectHome
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+   path('', redirectHome),
+    path('home/', homeView),
 ]
